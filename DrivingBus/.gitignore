@@ -1,0 +1,37 @@
+# Default generated stuff
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/QCAR/
+/UWP/
+/[Ll]ogs/
+*ConsoleE*
+
+# Unity3D Generated File On Crash Reports
+/sysinfo.txt
+
+/Assets/StreamingAssets/build_info.txt
+/Assets/StreamingAssets/build_info.txt.meta
+
+# Rider/Resharper stuff
+/.idea/
+/Assets/Plugins/Editor/JetBrains/
+/Assets/Plugins/Editor/JetBrains.meta
+/ProjectSettings/RiderScriptEditorPersistedState.asset
+
+# Trash
+/.vsconfig
+/.vs/
+/UserSettings/
+*[Rr]efs*
+
+# Unity3D Generated File On Crash Reports
+/sysinfo.txt
+/Assets/StreamingAssets/build_info.txt
+/Assets/StreamingAssets/build_info.txt.meta
+/Assets/StreamingAssets/WebglAssetBundles/*
+/Assets/StreamingAssets/WebglAssetBundles.meta
+/Assets/StreamingAssets/WinStandaloneAssetBundles/*
+/Assets/StreamingAssets/WinStandaloneAssetBundles.meta
