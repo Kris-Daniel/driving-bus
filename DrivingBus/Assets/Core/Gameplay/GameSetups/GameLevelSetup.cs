@@ -6,7 +6,7 @@ using DG.Tweening;
 using UnityEngine;
 using Zenject;
 
-namespace Core.Boot.Gameplay.GameSetups
+namespace Core.Gameplay.GameSetups
 {
     public class GameLevelSetup : MonoBehaviour
     {
@@ -38,7 +38,7 @@ namespace Core.Boot.Gameplay.GameSetups
             ResetLevel().GetAwaiter();
         }
         
-        async UniTask ResetLevel(bool isFirstGame = false)
+        async UniTask ResetLevel()
         {
             StopGameplayInput();
             await _fadeService.FadeInTween().AsyncWaitForCompletion();;
@@ -50,7 +50,6 @@ namespace Core.Boot.Gameplay.GameSetups
             }
 
             StartLevel();
-            await UniTask.Delay(500, true);
             await _fadeService.FadeOutTween().AsyncWaitForCompletion();;
 			
             StartGameplayInput();

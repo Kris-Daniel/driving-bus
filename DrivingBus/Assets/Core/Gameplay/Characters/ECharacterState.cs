@@ -2,6 +2,8 @@
 {
     public enum ECharacterState
     {
-        
+        None,
+        MoveInOpenWorld,
+        Driving,
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IResettable
     {
-        
+        void ResetFull();
     }
 }

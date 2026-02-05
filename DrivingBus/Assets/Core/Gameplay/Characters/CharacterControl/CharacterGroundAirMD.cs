@@ -3,7 +3,7 @@ using Core.Gameplay.EntityBasedLogic;
 using Core.ScriptableData;
 using UnityEngine;
 
-namespace Core.Gameplay.Characters.CommonMD
+namespace Core.Gameplay.Characters.CharacterControl
 {
     public class CharacterGroundAirMD : MonoDependency, IResettable
     {

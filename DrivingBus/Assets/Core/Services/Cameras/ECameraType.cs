@@ -2,6 +2,7 @@
 {
     public enum ECameraType
     {
-        
+        CharacterFPS,
+        Driving
     }
 }
