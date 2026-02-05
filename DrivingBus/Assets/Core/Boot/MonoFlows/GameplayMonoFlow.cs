@@ -29,7 +29,7 @@ namespace Core.Boot.MonoFlows
 		{
 			_inputService.Gameplay.Deactivate();
 			
-			await _fadeService.FadeOutTween().AsyncWaitForCompletion();
+			await _fadeService.FadeInTween().AsyncWaitForCompletion();
 			await _gameLevelSetup.RunSetup();
 		}
 

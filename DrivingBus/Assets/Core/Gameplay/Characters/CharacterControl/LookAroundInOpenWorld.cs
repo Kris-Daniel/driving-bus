@@ -41,7 +41,7 @@ namespace Core.Gameplay.Characters.CharacterControl
 
             _xRotation -= mouseY;
             _xRotation = Mathf.Clamp(_xRotation, -_maxLookAngle, _maxLookAngle);
-            _cameraService.transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+            _cameraService.WalkingCamera.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 
             transform.Rotate(Vector3.up * mouseX);
         }
