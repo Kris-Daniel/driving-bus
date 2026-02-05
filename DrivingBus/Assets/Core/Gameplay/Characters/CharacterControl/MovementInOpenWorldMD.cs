@@ -7,16 +7,15 @@ namespace Core.Gameplay.Characters.CharacterControl
     public class MovementInOpenWorldMD : MonoDependency
     {
         [SerializeField] CharacterControlDataSO _controlDataSO;
+		[SerializeField] CharacterInputsMD _playerMovementInputsMD;
+		[SerializeField] CharacterGroundAirMD _playerGroundAirMD;
+		[SerializeField] CharacterJumpMD _playerJumpMD;
 
 		Rigidbody _rigidbody;
 		Quaternion _lookDirection = Quaternion.identity;
 		Vector3 _goalVel;
 
 		float _jumpTime;
-
-		CharacterInputsMD _playerMovementInputsMD;
-		CharacterGroundAirMD _playerGroundAirMD;
-		CharacterJumpMD _playerJumpMD;
 
 		public override void Init()
 		{
@@ -49,7 +48,7 @@ namespace Core.Gameplay.Characters.CharacterControl
             
 			ApplyMovementForce(groundVel);
             
-            RotateAround();
+            // RotateAround();
 
             UpdateUprightForce();
             

@@ -10,13 +10,13 @@ namespace Core.Gameplay.Characters.CharacterControl
 {
     public class CharacterInputsMD : MonoDependency
     {
+        [SerializeField] CharacterControlDataSO _controlDataSO;
+        
         [Inject] InputService _inputService;
         [Inject] CameraService _cameraService;
 		
         Transform _cameraTransform;
         Vector3 _moveDirection;
-		
-        CharacterControlDataSO _controlDataSO;
 		
         float _jumpInputBufferDelta = -1f;
         bool _isJumpInput;

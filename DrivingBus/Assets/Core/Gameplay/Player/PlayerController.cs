@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core.Gameplay.Player
 {
-    public class PlayerStateController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         [SerializeField] MonoDependencyStateController _stateController;
         

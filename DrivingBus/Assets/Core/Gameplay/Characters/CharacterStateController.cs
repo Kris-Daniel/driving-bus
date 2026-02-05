@@ -19,25 +19,28 @@ namespace Core.Gameplay.Characters
         [SerializeField] CharacterJumpMD _jumpMD;
         
         [SerializeField] CharacterInputsMD _inputsMD;
+        [SerializeField] LookAroundInOpenWorld _lookAroundInOpenWorld;
 
         void Awake()
         {
-            _stateController.AddStateMD(ECharacterState.MoveInOpenWorld, _groundAirMD);
-            _stateController.AddStateMD(ECharacterState.MoveInOpenWorld, _inputsMD);
-            _stateController.AddStateMD(ECharacterState.MoveInOpenWorld, _jumpMD);
-            _stateController.AddStateMD(ECharacterState.MoveInOpenWorld, _movementInOpenWorld);
-            _stateController.AddStateMD(ECharacterState.MoveInOpenWorld, _transitionToDriving);
+            _stateController.AddStateMD(CharacterStateConstants.MoveInOpenWorld, _groundAirMD);
+            _stateController.AddStateMD(CharacterStateConstants.MoveInOpenWorld, _inputsMD);
+            _stateController.AddStateMD(CharacterStateConstants.MoveInOpenWorld, _jumpMD);
+            _stateController.AddStateMD(CharacterStateConstants.MoveInOpenWorld, _movementInOpenWorld);
+            _stateController.AddStateMD(CharacterStateConstants.MoveInOpenWorld, _transitionToDriving);
+            _stateController.AddStateMD(CharacterStateConstants.MoveInOpenWorld, _lookAroundInOpenWorld);
             
-            _stateController.AddStateMD(ECharacterState.Driving, _inputsMD);
-            _stateController.AddStateMD(ECharacterState.Driving, _drivingMD);
-            _stateController.AddStateMD(ECharacterState.Driving, _transitionToMovementInOpenWorld);
+            _stateController.AddStateMD(CharacterStateConstants.Driving, _inputsMD);
+            _stateController.AddStateMD(CharacterStateConstants.Driving, _drivingMD);
+            _stateController.AddStateMD(CharacterStateConstants.Driving, _transitionToMovementInOpenWorld);
+            _stateController.AddStateMD(CharacterStateConstants.Driving, _lookAroundInOpenWorld);
 
-            _stateController.SetState(ECharacterState.MoveInOpenWorld);
+            _stateController.SetState(CharacterStateConstants.MoveInOpenWorld);
         }
 
         public void ResetFull()
         {
-            _stateController.SetState(ECharacterState.MoveInOpenWorld);
+            _stateController.SetState(CharacterStateConstants.MoveInOpenWorld);
         }
     }
 }

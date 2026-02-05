@@ -1,0 +1,298 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a437891b145c4945bed49fe9c81f6883, type: 3}
+  m_Name: VehicleControlDataSO
+  m_EditorClassIdentifier: Assembly-CSharp::Core.ScriptableData.VehicleControlDataSO
+  CarTopSpeed: 10
+  PowerCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.77
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4
+      value: 0.8967295
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.6257197
+    - serializedVersion: 3
+      time: 0.637695
+      value: 0.8967295
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.21379519
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  AccelerationMultiplier: 4
+  BrakeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.031742483
+    - serializedVersion: 3
+      time: 0.01
+      value: 1
+      inSlope: 0
+      outSlope: -3.392439
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.055286925
+    - serializedVersion: 3
+      time: 0.47934058
+      value: 0.24280185
+      inSlope: -0.39280894
+      outSlope: -0.39280894
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.19720511
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.1
+      inSlope: -0.33605424
+      outSlope: -0.33605424
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15347774
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  BrakeCurveMultiplier: 0.2
+  AdditionalGripFactor: 1
+  HandBrakeGrip: 0.75
+  HandBrakeGripMultiplieForBackWheels: 0.9
+  FullStopByHandBrakeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.1
+      inSlope: -0.4519613
+      outSlope: -0.4519613
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.08623305
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TireMass: 0.1
+  SideSteeringGripBySpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.3
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.28482693
+      value: 0.3
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.95
+      inSlope: 0.9088709
+      outSlope: 0.9088709
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  SideSteeringGripMultiplierForBackWheels: 0.9
+  SideMultiplier: 150
+  RayDistance: 0.8
+  SuspensionStrength: 50
+  Damping: 2
+  SuspensionRestDist: 0.5
+  WheelModelOffset: -0.24
+  MaxWheelModelOffset: -0.1
+  MinWheelModelOffset: -0.4
+  WheelRotationLerpSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.7
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.13976137
+      value: 0.6178487
+      inSlope: -0.9958841
+      outSlope: -0.9958841
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15622884
+      outWeight: 0.055169083
+    - serializedVersion: 3
+      time: 0.43057176
+      value: 0.2735399
+      inSlope: -1.2362833
+      outSlope: -1.2362833
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.5748104
+      outSlope: -0.5748104
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07384539
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  WheelRotationLerpSpeed: 4
+  TurnAngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.8
+      inSlope: 0.10939204
+      outSlope: 0.10939204
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.049147442
+    - serializedVersion: 3
+      time: 0.31880534
+      value: 0.6020753
+      inSlope: -1.246369
+      outSlope: -1.246369
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.58306724
+      value: 0.23990719
+      inSlope: -1.3276751
+      outSlope: -1.3276751
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.107204296
+      outSlope: -0.107204296
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.10030091
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  MinTurnAngle: 6
+  MaxTurnAngle: 45
+  ReverseCarTopSpeed: 8
+  ReverseAccelerationMultiplier: 4
+  ReverseSideSteeringGripMultiplierForBackWheels: 3
+  ReverseMinTurnAngle: 45
+  AirForceMultiplier: 5
+  AirDampingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.8812821
+      outSlope: 1.8812821
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.064792395
+    - serializedVersion: 3
+      time: 0.174128
+      value: 0.34514305
+      inSlope: 0.014181852
+      outSlope: 0.014181852
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.14999898
+      outWeight: 0.10145525
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.0925158
+      outSlope: -1.0925158
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.13988936
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  AirDamping: 0.1
+  AirAdditionalGravity: -2

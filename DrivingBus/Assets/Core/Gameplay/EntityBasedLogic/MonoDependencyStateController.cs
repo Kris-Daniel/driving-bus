@@ -13,24 +13,24 @@ namespace Core.Gameplay.EntityBasedLogic
 
     public interface ISetterForCharacterState
     {
-        void SetState(ECharacterState newState);
+        void SetState(string newState);
     }
     
     public class MonoDependencyStateController : MonoBehaviour, ITimeInState, ISetterForCharacterState
     {
-        ECharacterState _prevState = ECharacterState.None;
-        ObservableField<ECharacterState> _currentState = new ObservableField<ECharacterState>(ECharacterState.None);
+        string _prevState = "";
+        ObservableField<string> _currentState = new ObservableField<string>("");
 
         float _timeInState = 0f;
         
-        Dictionary<ECharacterState, List<MonoDependency>> _monoDependencies = new Dictionary<ECharacterState, List<MonoDependency>>();
+        Dictionary<string, List<MonoDependency>> _monoDependencies = new Dictionary<string, List<MonoDependency>>();
         
         void Awake()
         {
             _currentState.OnValueChanged += OnStateChanged;
         }
 
-        void OnStateChanged(ECharacterState newState)
+        void OnStateChanged(string newState)
         {
             if (_monoDependencies.ContainsKey(_prevState))
             {
@@ -53,12 +53,12 @@ namespace Core.Gameplay.EntityBasedLogic
             _prevState = newState;
         }
 
-        public void SetState(ECharacterState newState)
+        public void SetState(string newState)
         {
             _currentState.Value = newState;
         }
 
-        public void AddStateMD(ECharacterState state, MonoDependency component)
+        public void AddStateMD(string state, MonoDependency component)
         {
             if (!_monoDependencies.ContainsKey(state))
             {
