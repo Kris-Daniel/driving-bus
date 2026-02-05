@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910257326d4f464b85413098dc891470, type: 3}
+  m_Name: CharacterControlDataSO
+  m_EditorClassIdentifier: Assembly-CSharp::Core.ScriptableData.CharacterControlDataSO
+  MaxSpeed: 10
+  Acceleration: 0
+  AccelerationInAir: 0
+  MaxAccelerationForce: 100
+  MaxAccelerationFactor: 0
+  SpeedFactor: 1
+  AccelerationFactorFromDot:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  MaxAccelerationForceFactorFromDot:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ForceScale: {x: 1, y: 1, z: 1}
+  MovementInAirMultiplier: 0.1
+  JumpForce: 10
+  JumpMultiplierWhileMoving: 1.3
+  JumpAngleWhileMoving: 45
+  TimeOnGroundBeforeNewJump: 0.1
+  JumpButtonBuffer: 0.2
+  JumpOutsideBuffer: 0.2
+  JumpForceByTimeMultiplier: 1
+  JumpForceByTimeCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  JumpGravityMultiplier: 1
+  JumpGravityCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RotationSpeed: 180
+  BufferForSlopes: 0
+  RayDistance: 0
+  RideHeight: 0
+  RideSpringStrength: 0
+  RideSpringDamper: 0
+  UprightJointSpringStrength: 0
+  UprightJointSpringDamper: 0
+  CharacterLayer:
+    serializedVersion: 2
+    m_Bits: 0
