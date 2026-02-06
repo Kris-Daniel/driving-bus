@@ -134,7 +134,7 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
                     ""id"": ""a338bdfa-e0e3-47e6-8287-9d9f3553ecf4"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -1488,6 +1488,28 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Press"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c44a6045-46f6-44f3-9d92-427df4d46ff4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b27e68f6-b976-4ebe-b851-d983ed6aa84d"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }

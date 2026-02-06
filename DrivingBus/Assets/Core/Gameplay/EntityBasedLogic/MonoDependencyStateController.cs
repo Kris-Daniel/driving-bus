@@ -34,11 +34,11 @@ namespace Core.Gameplay.EntityBasedLogic
         {
             if (_monoDependencies.ContainsKey(_prevState))
             {
-                foreach (var monoDependency in _monoDependencies[_prevState])
+                foreach (var prevMonoDependency in _monoDependencies[_prevState])
                 {
-                    if (!_monoDependencies[newState].Contains(monoDependency))
+                    if (!_monoDependencies[newState].Contains(prevMonoDependency))
                     {
-                        monoDependency.Exit();
+                        prevMonoDependency.Exit();
                     }
                 }
             }
@@ -55,7 +55,10 @@ namespace Core.Gameplay.EntityBasedLogic
 
         public void SetState(string newState)
         {
-            _currentState.Value = newState;
+            if (_currentState.Value != newState)
+            {
+                _currentState.Value = newState;
+            }
         }
 
         public void AddStateMD(string state, MonoDependency component)

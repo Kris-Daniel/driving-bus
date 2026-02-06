@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 230593472}
   - component: {fileID: 230593471}
   - component: {fileID: 230593470}
+  - component: {fileID: 230593474}
   m_Layer: 0
   m_Name: P_Bus
   m_TagString: Untagged
@@ -470,6 +471,18 @@ MonoBehaviour:
   _vehicleNoControlMD: {fileID: 230593470}
   DriverPosition: {fileID: 1498281915}
   ExitCarPosition: {fileID: 209834150}
+--- !u!114 &230593474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230593466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48dab81693b948b5a500210c2943c343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Gameplay.GameplayUtils.ResetFromSpawn
 --- !u!1 &249218571
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +834,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6986607472629252557, guid: 2664969c73394bc4fac0f0418823e5ea, type: 3}
   m_PrefabInstance: {fileID: 8129585273812804908}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &524126770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524126771}
+  - component: {fileID: 524126772}
+  m_Layer: 0
+  m_Name: GameRestartByResetInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &524126771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524126770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1857458753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524126772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524126770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab323dcaaa3d4121914f28bc4bafa515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Gameplay.GameplayUtils.GameRestartByResetInput
 --- !u!1 &526523473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,7 +2116,7 @@ Transform:
   m_GameObject: {fileID: 1498281914}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1879333, y: 0.2339999, z: 0.92366695}
+  m_LocalPosition: {x: -0.1879333, y: 0.3095, z: 0.9328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2197,6 +2254,7 @@ GameObject:
   - component: {fileID: 1559551621}
   - component: {fileID: 1559551620}
   - component: {fileID: 1559551632}
+  - component: {fileID: 1559551633}
   m_Layer: 0
   m_Name: P_Player
   m_TagString: Untagged
@@ -2342,7 +2400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9427a9ed6f034413b53d495d1f7ab2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Gameplay.Player.PlayerController
-  _stateController: {fileID: 0}
 --- !u!54 &1559551630
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2401,6 +2458,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Core.Gameplay.Characters.CharacterControl.LookAroundInOpenWorld
   _mouseSensitivity: 1
   _maxLookAngle: 80
+--- !u!114 &1559551633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559551619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48dab81693b948b5a500210c2943c343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Gameplay.GameplayUtils.ResetFromSpawn
 --- !u!1 &1716033372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2739,7 @@ Transform:
   - {fileID: 21370505}
   - {fileID: 13971225}
   - {fileID: 711199328}
+  - {fileID: 524126771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1857458754

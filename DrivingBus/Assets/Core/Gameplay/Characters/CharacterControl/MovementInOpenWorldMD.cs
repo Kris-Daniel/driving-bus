@@ -24,12 +24,12 @@ namespace Core.Gameplay.Characters.CharacterControl
 
 		public override void Enter()
 		{
-			
+			enabled = true;
 		}
 
 		public override void Exit()
 		{
-			
+			enabled = false;
 		}
 		
 		public float Speed() => _rigidbody.linearVelocity.magnitude;

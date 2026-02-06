@@ -100,7 +100,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   BrakeCurveMultiplier: 0.2
   AdditionalGripFactor: 1
-  HandBrakeGrip: 0.75
+  HandBrakeGrip: 0.1
   HandBrakeGripMultiplieForBackWheels: 0.9
   FullStopByHandBrakeCurve:
     serializedVersion: 2
