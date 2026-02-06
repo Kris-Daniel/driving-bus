@@ -20,10 +20,9 @@ namespace Core.Gameplay.Characters.CharacterControl
             _colliders = _rigidbody.GetComponentsInChildren<Collider>();
         }
 
-        public override async void Enter()
+        public override void Enter()
         {
             Debug.Log("Entering TransitionToMovementInOpenWorldStateMD");
-            await UniTask.Yield();
             _inputService.Gameplay.Interact.performed += OnExitCar;
         }
 

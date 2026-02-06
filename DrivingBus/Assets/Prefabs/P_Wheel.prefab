@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6986607472629252557}
   - component: {fileID: 2838137151208534933}
+  - component: {fileID: 850579321078807843}
   m_Layer: 0
   m_Name: P_Wheel
   m_TagString: Untagged
@@ -55,6 +56,23 @@ MonoBehaviour:
   _carLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &850579321078807843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056086532173513473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f8cc6c28eb41c8b834ad314a9dcc90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Gameplay.Vehicles.WheelRays
+  _carLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  _isLeftWheel: 0
+  _vehicleControlData: {fileID: 11400000, guid: f1ceda49907369f4599b210c2c29f6e5, type: 2}
 --- !u!1 &7614354291781176786
 GameObject:
   m_ObjectHideFlags: 0

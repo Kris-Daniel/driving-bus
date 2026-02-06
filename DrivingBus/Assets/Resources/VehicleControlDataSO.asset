@@ -162,13 +162,13 @@ MonoBehaviour:
     m_RotationOrder: 4
   SideSteeringGripMultiplierForBackWheels: 0.9
   SideMultiplier: 150
-  RayDistance: 0.5
-  SuspensionStrength: 126.6
+  RayDistance: 1
+  SuspensionStrength: 35
   Damping: 2
-  SuspensionRestDist: 0.35
-  WheelModelOffset: -0.24
-  MaxWheelModelOffset: -0.1
-  MinWheelModelOffset: -0.005
+  SuspensionRestDist: 0.5
+  WheelModelOffset: -0.15
+  MaxWheelModelOffset: 1.27
+  MinWheelModelOffset: -0.04
   WheelRotationLerpSpeedCurve:
     serializedVersion: 2
     m_Curve:
