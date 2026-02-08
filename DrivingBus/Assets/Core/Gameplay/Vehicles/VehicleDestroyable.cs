@@ -1,4 +1,5 @@
-﻿using Core.Boot.FlowInterfaces;
+﻿using System;
+using Core.Boot.FlowInterfaces;
 using UnityEngine;
 
 namespace Core.Gameplay.Vehicles
@@ -6,6 +7,7 @@ namespace Core.Gameplay.Vehicles
     public class VehicleDestroyable : MonoBehaviour, IResettable
     {
         [SerializeField] float _speedToBeDestroyed;
+        [SerializeField] float _impulseToBeDestroyed = 2000; 
         [SerializeField] Collider _colliderToDetach;
         
         Transform _initialParent;
@@ -14,32 +16,46 @@ namespace Core.Gameplay.Vehicles
         Vector3 _initialScale;
 
         bool _isDetached;
+        
+        Rigidbody _attachedRigidbody;
 
         void Awake()
         {
             _initialParent = transform.parent;
-            _initialPosition = transform.position;
-            _initialRotation = transform.rotation;
+            _initialPosition = transform.localPosition;
+            _initialRotation = transform.localRotation;
             _initialScale = transform.localScale;
+            _colliderToDetach.enabled = false;
+
+            _attachedRigidbody = GetComponentInParent<Rigidbody>();
         }
 
-        void OnCollisionEnter(Collision other)
+        public void CustomCollisionEnter(Collision other)
         {
             if(_isDetached) return;
-            _isDetached = true;
             
             var collisionImpulse = other.impulse.magnitude;
+            
+            Debug.Log("Collision impulse: " + collisionImpulse);
 
-            if (collisionImpulse > _speedToBeDestroyed)
+            if (collisionImpulse > _impulseToBeDestroyed)
             {
-                Detach();
+                var speed = _attachedRigidbody.linearVelocity.magnitude;
+                Debug.Log("Speed: " + speed);
+
+                if (speed > _speedToBeDestroyed)
+                {
+                    Detach();
+                }
             }
         }
 
         void Detach()
         {
+            _isDetached = true;
             _colliderToDetach.transform.SetParent(null);
             _colliderToDetach.gameObject.AddComponent<Rigidbody>();
+            _colliderToDetach.enabled = true;
         }
 
         public void ResetFull()
@@ -55,6 +71,7 @@ namespace Core.Gameplay.Vehicles
             _colliderToDetach.transform.localPosition = _initialPosition;
             _colliderToDetach.transform.localRotation = _initialRotation;
             _colliderToDetach.transform.localScale = _initialScale;
+            _colliderToDetach.enabled = false;
         }
     }
 }
