@@ -15,6 +15,7 @@ namespace Core.Services
 		public InputActionEvents Jump;
 		public InputActionEvents Sprint;
 		public InputActionEvents Interact;
+		public InputActionEvents EnterExitCar;
 		public InputActionEvents Reset;
 		public InputActionEvents Attack;
 
@@ -33,6 +34,7 @@ namespace Core.Services
 			Jump = new InputActionEvents(_playerInput.actions["Jump"], this);
 			Sprint = new InputActionEvents(_playerInput.actions["Sprint"], this);
 			Interact = new InputActionEvents(_playerInput.actions["Interact"], this);
+			EnterExitCar =  new InputActionEvents(_playerInput.actions["EnterExitCar"], this);
 			Reset = new InputActionEvents(_playerInput.actions["Reset"], this);
 			Attack = new InputActionEvents(_playerInput.actions["Attack"], this);
 			
@@ -44,6 +46,7 @@ namespace Core.Services
 			AddListener("Jump", Jump);
 			AddListener("Sprint", Sprint);
 			AddListener("Interact", Interact);
+			AddListener("EnterExitCar", EnterExitCar);
 			AddListener("Reset", Reset);
 			AddListener("Attack", Attack);
 		}

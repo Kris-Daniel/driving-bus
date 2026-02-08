@@ -22,13 +22,13 @@ namespace Core.Gameplay.Characters.CharacterControl
         public override void Enter()
         {
             Debug.Log("Entering TransitionToDrivingStateMD");
-            _inputService.Gameplay.Interact.performed += OnGoToDrivingState;
+            _inputService.Gameplay.EnterExitCar.performed += OnGoToDrivingState;
         }
 
         public override void Exit()
         {
             Debug.Log("Exiting TransitionToDrivingStateMD");
-            _inputService.Gameplay.Interact.performed -= OnGoToDrivingState;
+            _inputService.Gameplay.EnterExitCar.performed -= OnGoToDrivingState;
         }
 
         void OnGoToDrivingState()

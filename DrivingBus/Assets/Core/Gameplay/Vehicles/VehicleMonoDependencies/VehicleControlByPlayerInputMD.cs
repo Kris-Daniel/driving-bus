@@ -1,11 +1,12 @@
-﻿using Core.Gameplay.EntityBasedLogic;
+﻿using Core.Boot.FlowInterfaces;
+using Core.Gameplay.EntityBasedLogic;
 using Core.Services;
 using UnityEngine;
 using Zenject;
 
 namespace Core.Gameplay.Vehicles.VehicleMonoDependencies
 {
-    public class VehicleControlByPlayerInputMD : MonoDependency
+    public class VehicleControlByPlayerInputMD : MonoDependency, IResettable
     {
         [Inject] InputService _inputService;
 
@@ -20,16 +21,23 @@ namespace Core.Gameplay.Vehicles.VehicleMonoDependencies
         public override void Enter()
         {
             _isInState = true;
+            _inputService.Gameplay.Interact.performed += OnToggleEngine;
+        }
+
+        void OnToggleEngine()
+        {
+            _carInputs.EngineIsOn.Value = !_carInputs.EngineIsOn.Value;
         }
 
         public override void Exit()
         {
             _isInState = false;
+            _inputService.Gameplay.Interact.performed -= OnToggleEngine;
         }
         
         void Update()
         {
-            if (_isInState)
+            if (_isInState && _carInputs.EngineIsOn.Value)
             {
                 var moveValue = _inputService.Gameplay.MoveValue();
                 var moveRawValue = _inputService.Gameplay.MoveRawValue();
@@ -41,6 +49,11 @@ namespace Core.Gameplay.Vehicles.VehicleMonoDependencies
                 _carInputs.IsHandbrake = _inputService.Gameplay.Jump.IsPressed();
                 _carInputs.IsNitro = _inputService.Gameplay.Sprint.IsPressed();
             }
+        }
+
+        public void ResetFull()
+        {
+            _carInputs.ClearInputs();
         }
     }
 }

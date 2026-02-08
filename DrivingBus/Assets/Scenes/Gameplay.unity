@@ -376,6 +376,7 @@ Transform:
   - {fileID: 729904654}
   - {fileID: 1752259022}
   - {fileID: 441323005}
+  - {fileID: 538325940}
   m_Father: {fileID: 249218572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &230593468
@@ -469,6 +470,7 @@ MonoBehaviour:
   _stateController: {fileID: 230593472}
   _controlByPlayerInputMD: {fileID: 230593471}
   _vehicleNoControlMD: {fileID: 230593470}
+  _vehicleSoundsMD: {fileID: 538325941}
   DriverPosition: {fileID: 1498281915}
   ExitCarPosition: {fileID: 209834150}
 --- !u!114 &230593474
@@ -953,6 +955,111 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!1001 &538325939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 230593467}
+    m_Modifications:
+    - target: {fileID: 988798111477450092, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_Name
+      value: P_CarSoundTimeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242910339105857573, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_Pitch
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242910339105857573, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632276958890573121, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: _vehicleBase
+      value: 
+      objectReference: {fileID: 230593473}
+    - target: {fileID: 1632276958890573121, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: _carParameters
+      value: 
+      objectReference: {fileID: 230593468}
+    - target: {fileID: 1632276958890573121, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: _engineAudioSources.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632276958890573121, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: '_engineAudioSources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1391607263}
+    - target: {fileID: 1632276958890573121, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: '_engineAudioSources.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1899930833}
+    - target: {fileID: 1964372863056829760, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_Pitch
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.77872336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.47436333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.404307
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+--- !u!4 &538325940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5563430158757739900, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+  m_PrefabInstance: {fileID: 538325939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &538325941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1632276958890573121, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+  m_PrefabInstance: {fileID: 538325939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e4d2e18aa84272a5fbf5e167f7b297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Gameplay.Vehicles.VehicleMonoDependencies.VehicleSoundsMD
 --- !u!1 &703938755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,6 +1857,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374925075}
   m_Mesh: {fileID: -6577050749583129578, guid: 3e28a3857b738694181d50cbd76aa86e, type: 3}
+--- !u!82 &1391607263 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1964372863056829760, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+  m_PrefabInstance: {fileID: 538325939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1434455800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3019,6 +3131,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883550952}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1899930833 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1242910339105857573, guid: 18b26b9b00797924baf847b6c0cac5f8, type: 3}
+  m_PrefabInstance: {fileID: 538325939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2034405332
 GameObject:
   m_ObjectHideFlags: 0

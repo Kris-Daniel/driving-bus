@@ -138,6 +138,15 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""EnterExitCar"",
+                    ""type"": ""Button"",
+                    ""id"": ""fad15af5-1aa2-453c-8ebd-fd32e53dc471"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""0480fec2-bc59-4729-854d-e90c91b795e1"",
@@ -1512,6 +1521,28 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6a69e8a-bd7e-47cd-a0e2-1cc0b2916e40"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""EnterExitCar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb8dc6fd-996a-4b20-8ac4-0d8103d1af7d"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EnterExitCar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -2102,6 +2133,7 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
         m_PlayerCustom_Look = m_PlayerCustom.FindAction("Look", throwIfNotFound: true);
         m_PlayerCustom_Attack = m_PlayerCustom.FindAction("Attack", throwIfNotFound: true);
         m_PlayerCustom_Interact = m_PlayerCustom.FindAction("Interact", throwIfNotFound: true);
+        m_PlayerCustom_EnterExitCar = m_PlayerCustom.FindAction("EnterExitCar", throwIfNotFound: true);
         m_PlayerCustom_Jump = m_PlayerCustom.FindAction("Jump", throwIfNotFound: true);
         m_PlayerCustom_Sprint = m_PlayerCustom.FindAction("Sprint", throwIfNotFound: true);
         m_PlayerCustom_Reset = m_PlayerCustom.FindAction("Reset", throwIfNotFound: true);
@@ -2228,6 +2260,7 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
     private readonly InputAction m_PlayerCustom_Look;
     private readonly InputAction m_PlayerCustom_Attack;
     private readonly InputAction m_PlayerCustom_Interact;
+    private readonly InputAction m_PlayerCustom_EnterExitCar;
     private readonly InputAction m_PlayerCustom_Jump;
     private readonly InputAction m_PlayerCustom_Sprint;
     private readonly InputAction m_PlayerCustom_Reset;
@@ -2287,6 +2320,10 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
         /// Provides access to the underlying input action "PlayerCustom/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m_PlayerCustom_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerCustom/EnterExitCar".
+        /// </summary>
+        public InputAction @EnterExitCar => m_Wrapper.m_PlayerCustom_EnterExitCar;
         /// <summary>
         /// Provides access to the underlying input action "PlayerCustom/Jump".
         /// </summary>
@@ -2440,6 +2477,9 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @EnterExitCar.started += instance.OnEnterExitCar;
+            @EnterExitCar.performed += instance.OnEnterExitCar;
+            @EnterExitCar.canceled += instance.OnEnterExitCar;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
@@ -2550,6 +2590,9 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @EnterExitCar.started -= instance.OnEnterExitCar;
+            @EnterExitCar.performed -= instance.OnEnterExitCar;
+            @EnterExitCar.canceled -= instance.OnEnterExitCar;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
@@ -2969,6 +3012,13 @@ public partial class @InputSystem_ActionsDefault: IInputActionCollection2, IDisp
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "EnterExitCar" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnEnterExitCar(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

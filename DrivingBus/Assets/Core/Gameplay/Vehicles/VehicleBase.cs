@@ -10,6 +10,7 @@ namespace Core.Gameplay.Vehicles
         [SerializeField] MonoDependencyStateController _stateController;
         [SerializeField] VehicleControlByPlayerInputMD _controlByPlayerInputMD;
         [SerializeField] VehicleNoControlMD _vehicleNoControlMD;
+        [SerializeField] VehicleSoundsMD _vehicleSoundsMD;
         
         public Transform DriverPosition;
         public Transform ExitCarPosition;
@@ -19,6 +20,9 @@ namespace Core.Gameplay.Vehicles
         {
             _stateController.AddStateMD(VehicleStateConstants.DriveByPlayer, _controlByPlayerInputMD);
             _stateController.AddStateMD(VehicleStateConstants.NoDriving, _vehicleNoControlMD);
+            
+            _stateController.AddStateMD(VehicleStateConstants.DriveByPlayer, _vehicleSoundsMD);
+            _stateController.AddStateMD(VehicleStateConstants.NoDriving, _vehicleSoundsMD);
             
             _stateController.SetState(VehicleStateConstants.NoDriving);
         }

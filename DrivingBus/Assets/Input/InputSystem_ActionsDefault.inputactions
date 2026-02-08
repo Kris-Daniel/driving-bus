@@ -52,6 +52,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "EnterExitCar",
+                    "type": "Button",
+                    "id": "fad15af5-1aa2-453c-8ebd-fd32e53dc471",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "0480fec2-bc59-4729-854d-e90c91b795e1",
@@ -1424,6 +1433,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6a69e8a-bd7e-47cd-a0e2-1cc0b2916e40",
+                    "path": "<Keyboard>/f",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "EnterExitCar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb8dc6fd-996a-4b20-8ac4-0d8103d1af7d",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterExitCar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

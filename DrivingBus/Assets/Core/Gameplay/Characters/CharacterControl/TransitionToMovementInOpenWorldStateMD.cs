@@ -23,13 +23,13 @@ namespace Core.Gameplay.Characters.CharacterControl
         public override void Enter()
         {
             Debug.Log("Entering TransitionToMovementInOpenWorldStateMD");
-            _inputService.Gameplay.Interact.performed += OnExitCar;
+            _inputService.Gameplay.EnterExitCar.performed += OnExitCar;
         }
 
         public override void Exit()
         {
             Debug.Log("Exiting TransitionToMovementInOpenWorldStateMD");
-            _inputService.Gameplay.Interact.performed -= OnExitCar;
+            _inputService.Gameplay.EnterExitCar.performed -= OnExitCar;
         }
 
         void OnExitCar()
